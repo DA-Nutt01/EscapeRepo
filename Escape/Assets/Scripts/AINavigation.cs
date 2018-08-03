@@ -16,4 +16,14 @@ public class AINavigation : MonoBehaviour {
     {
         agent.SetDestination(target.position);	
 	}
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag.Equals("Player"))
+        {
+            other.gameObject.SetActive(false);
+            //other.gameObject.GetComponent<LightAdjuster>().DepleteLight();
+        }
+    }
+
 }

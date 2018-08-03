@@ -10,8 +10,13 @@ public class LightAdjuster : MonoBehaviour {
         light = GetComponentInChildren<Light>();
 	}
 	
-    public void ampLight() {
+    public void AmpLight() {
         light.range += 1f;
         light.intensity += 1f;
+    }
+
+    public void DepleteLight() {
+        light.range -= 1f;
+        light.intensity -= 1f;
     }
 }

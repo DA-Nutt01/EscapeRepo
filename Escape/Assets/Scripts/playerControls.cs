@@ -28,7 +28,7 @@ public class playerControls : MonoBehaviour
         if (other.gameObject.CompareTag("Pick Up"))
         {
             other.gameObject.SetActive(false);
-            gameObject.GetComponent<LightAdjuster>().ampLight();
+            gameObject.GetComponent<LightAdjuster>().AmpLight();
 
         }
     }
