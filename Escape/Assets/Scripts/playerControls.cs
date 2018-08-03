@@ -5,12 +5,12 @@ public class playerControls : MonoBehaviour
 {
 
     public float speed;
-
     private Rigidbody rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
     }
 
     void FixedUpdate()
@@ -28,6 +28,9 @@ public class playerControls : MonoBehaviour
         if (other.gameObject.CompareTag("Pick Up"))
         {
             other.gameObject.SetActive(false);
+            gameObject.GetComponent<LightAdjuster>().ampLight();
+
         }
     }
+
 }
