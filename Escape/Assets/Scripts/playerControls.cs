@@ -22,15 +22,4 @@ public class playerControls : MonoBehaviour
 
         rb.AddForce(movement * speed);
     }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Pick Up"))
-        {
-            other.gameObject.SetActive(false);
-            gameObject.GetComponent<LightAdjuster>().AmpLight();
-
-        }
-    }
-
 }
