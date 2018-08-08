@@ -11,8 +11,11 @@ public class PlayerLightControls : MonoBehaviour {
 
     // Increases the range and intensity of light object by set amount
     public void AmpLight() {
-        GameObject Player = GameObject.Find("Player"); // Finds the Player
-        LightPulse lightPulse = Player.GetComponent<LightPulse>(); // Finds the script on the Player responsible for lighting
+        // Finds the Player
+        GameObject Player = GameObject.Find("Player"); 
+
+        // Finds the script on the Player responsible for lighting
+        LightPulse lightPulse = Player.GetComponent<LightPulse>();
 
         lightPulse.peakRange += 1f;
         lightPulse.baseRange += 1f;
