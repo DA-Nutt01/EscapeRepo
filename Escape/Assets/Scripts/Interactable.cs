@@ -12,6 +12,11 @@ public class Interactable : MonoBehaviour {
         Gizmos.DrawWireSphere(transform.position, radius);
     }
 
+    public virtual void Interact () 
+    {
+        Debug.Log("Interacting " + transform.name);
+    }
+
     void Update()
     {
         if (isFocus)
@@ -20,7 +25,7 @@ public class Interactable : MonoBehaviour {
             if (Input.GetMouseButtonDown(0))
             {
                 //INTERACT
-                Debug.Log("Interacting " + transform.name);
+                Interact(); 
             }
            
         }
