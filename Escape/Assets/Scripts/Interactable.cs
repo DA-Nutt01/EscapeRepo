@@ -21,13 +21,12 @@ public class Interactable : MonoBehaviour {
     {
         if (isFocus)
         {
-            //CHECK FOR PLAYER INTERACTION INPUT
-            if (Input.GetMouseButtonDown(0))
-            {
-                //INTERACT
-                Interact(); 
-            }
-           
+                //CHECK FOR PLAYER INTERACTION INPUT
+                if (Input.GetMouseButtonDown(0))
+                {
+                    //INTERACT
+                    Interact();
+                }
         }
     }
 

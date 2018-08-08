@@ -24,6 +24,7 @@ public class playerControls : MonoBehaviour
 
         rb.AddForce(movement * speed);
 
+
     }
 
     void SetFocus (Interactable newFocus)
@@ -52,4 +53,5 @@ public class playerControls : MonoBehaviour
         Interactable interactable = other.GetComponent<Interactable>();
         RemoveFocus(interactable);
     }
+
 }
